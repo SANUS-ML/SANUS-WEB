@@ -36,6 +36,14 @@ SANUS is a Computer Aided Diagnostic Platform where people can diagnose their di
 └── SANUS.png
 ```
 
+## How to run this 
+1. Open your terminal
+2. git clone https://github.com/SANUS-ML/SANUS-WEB.git
+3. cd SANUS-WEB
+4. To run the Backend Code. [Click Here](https://github.com/SANUS-ML/SANUS-WEB/blob/master/Backend/README.md)
+5. To run the Frontend Code. [Click Here](https://github.com/SANUS-ML/SANUS-WEB/blob/master/Frontend/README.md)
+
+
 ## High Level Architecture Diagram
 <img src="SANUS.png">
 
