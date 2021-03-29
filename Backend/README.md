@@ -1,4 +1,4 @@
-# Backend
+# Backend - Flask Server
 
 ## How to run the server
 ```
