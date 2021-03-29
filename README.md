@@ -9,17 +9,17 @@ SANUS is a Computer Aided Diagnostic Platform where people can diagnose their di
 [Youtube Link](https://youtu.be/btGCzlapTsE)
 
 ## Our Services
->1. Malaria Detection
->2. Brain Tumor Detection
->3. Heart Disease Prediction
->4. Pneumonia Detection
->5. Skin Cancer Detection
+1. Malaria Detection
+2. Brain Tumor Detection
+3. Heart Disease Prediction
+4. Pneumonia Detection
+5. Skin Cancer Detection
 
 ## Unique Features
-> 1. User Friendly.
-> 2. Get instant report of the diagnosis.
-> 3. Light Weighted Machine Learning and Deep Learning Models.
-> 4. Provides a multiplatform support.
+1. User Friendly.
+2. Get instant report of the diagnosis.
+3. Light Weighted Machine Learning and Deep Learning Models.
+4. Provides a multiplatform support.
 
 ## Target Audience
 * Our target audience are the people who want fast medical checkups. As we all know, internet is available to majority of the people and they can go and conduct test.
