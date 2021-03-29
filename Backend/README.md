@@ -22,4 +22,42 @@
 ```
 **Note:** After running this commands and following this instructions carefully, you need to [Click Here](https://github.com/SANUS-ML/SANUS-WEB/blob/master/Frontend/README.md)
 
+## Project Structure
+```
+.
+├── README.md
+├── package-lock.json
+├── package.json
+├── public
+│   ├── Images/
+│   ├── css/
+│   ├── index.html
+│   ├── js/
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── App.js
+    ├── images
+    │   ├── 2409741.jpg
+    │   ├── 2409773.jpg
+    │   ├── 2409773b.jpg
+    │   ├── Download-Free-Computer-Science-Background.jpg
+    │   ├── WTH.gif
+    │   ├── brain-tumor.jpg
+    │   ├── ecg.gif
+    │   ├── heart_disease.jpg
+    │   ├── hrr.jpg
+    │   ├── logo3.png
+    │   ├── logo_up.png
+    │   ├── malaria.jpg
+    │   ├── manish.jpeg
+    │   ├── mosquito.png
+    │   ├── pp.png
+    │   ├── sayan.jpg
+    │   ├── strive-cardiology.png
+    │   └── taran.png
+    └── index.js
+
+6 directories, 58 files
+```
 # Thank You!
