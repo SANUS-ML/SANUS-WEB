@@ -1,7 +1,7 @@
 # Frontend - React App
 
 ## How to run this
-**Notes:** Make sure you have started the backend server. If not [Click Here](https://github.com/SANUS-ML/SANUS-WEB/blob/master/Backend/README.md)
+**Note:** Make sure you have started the backend server. If not [Click Here](https://github.com/SANUS-ML/SANUS-WEB/blob/master/Backend/README.md)
 ```
 1. If you are in the root directory of the project then 
    (a) cd Frontend
