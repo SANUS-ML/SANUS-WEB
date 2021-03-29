@@ -1,0 +1,24 @@
+/*
+Theme Name: HealthFlex Child
+Theme URI: http://plethorathemes.com/healthflex/
+Description: Child theme for Health Flex (Plethora Themes)
+Version: 1.0.0
+Author: Plethora Themes
+Author URI: http://plethorathemes.com
+License: GNU General Public License v2 or later 
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive-layout, theme-options, translation-ready
+Template: healthflex
+*/
+/* DO YOUR STUFF AFTER THIS !!  */
+
+/*** ONLINE DEMO ONLY: MOVE HOTJAR BOX TO THE LEFT ***/
+#_hj-f5b2a1eb-9b07_poll {
+    left: 50px !important;
+    right: inherit;
+}
+
+/*** TOP BAR: MORE DEMOS BUTTON ***/
+.top_menu_container ul.top_menu > li:last-child:not(.lihasdropdown).more_demos_top_bar > a {
+    color: #58a8ff;
+}

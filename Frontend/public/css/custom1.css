@@ -1,0 +1,23 @@
+.vc_custom_1446619389066{background-color: #088eff !important;}.vc_custom_1447875610924{background-color: #269cff !important;}.vc_custom_1447875785935{background-color: #45aaff !important;}.vc_custom_1447875797423{background-color: #64b8ff !important;}
+ .wpb_animate_when_almost_visible { opacity: 1; }
+
+				@media (max-width: 480px) {
+
+  .woocommerce .cart .actions input {
+      float: none !important;
+      display: block;
+      margin: 15px auto;
+  }
+  .woocommerce #content table.cart td.actions .coupon,
+  .woocommerce table.cart td.actions .coupon,
+  .woocommerce-page #content table.cart td.actions .coupon,
+  .woocommerce-page table.cart td.actions .coupon { float: none;}
+  .woocommerce table.shop_table td.actions .coupon .input-text { width: 100%; }
+  .woocommerce table.shop_table thead tr th { font-size: 12px; }
+  .shop_table_responsive {overflow-x: auto;}
+}
+
+/*** SAFARI ANGLED POSITIVE FIX ***/
+.sep_angled_positive_bottom .separator_bottom:before {
+    right: 49.8% !important;
+}	

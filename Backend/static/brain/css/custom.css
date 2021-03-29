@@ -1,0 +1,8 @@
+#imagePreview {
+    background-image: url(../images/logo_up.png);
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }

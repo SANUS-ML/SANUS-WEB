@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link href="{{ url_for('static', filename='skin/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='skin/vendor/2221mb/neumorphism.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='brain/css/custom.css') }}" rel="stylesheet" />
+    
+
+
+    <title>JAAGRAT</title>
+    <style>
+        .legend {
+          list-style: none;
+        }
+        .legend li {
+            float: left;
+        margin-right: 10px;
+        font-family: "Nunito Sans", sans-serif;
+        font-weight: 600;
+        font-size: 18;
+        }
+        .legend span {
+            border: 1px solid #ccc;
+        float: left;
+        width: 16px;
+        height: 16px;        
+        border-radius: 5px;
+        margin: 4px;
+        }
+        /* your colors */
+        .legend .pink {
+          background-color: #ff00ff;
+        }
+        .legend .green {
+          background-color: #00ff88;
+        }
+        .legend .blue {
+          background-color: #0000ff;
+        }
+      </style>
+</head>
+<body>
+
+    <div>d-none d-md-inline-block
+        <header class="header-global">
+        <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light">
+            <div class="container position-relative">
+                <div class="text-center">
+                    <div class="icon icon-shape shadow-soft border border-light rounded-circle">
+                        <img src="{{ url_for('static', filename='brain/images/logo_up.png') }}" style="width: 70%;">
+                    </div>
+                </div>
+                
+    
+    
+    
+                <div class="d-flex align-items-center">
+                
+    
+                <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                <li class="nav-item dropdown">
+                            <span class="nav-link " data-toggle="dropdown" >
+                            <a class="btn btn-icon-only btn-pill btn-github" type="button" aria-label="github button">
+                        <span aria-hidden="true" class="fas fa-phone-alt"></span>
+                            </a>
+                            </span>
+                        </li>
+                        
+                    </ul>
+    
+    
+                    <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="btn btn-icon-only btn-pill btn-github" type="button" aria-label="github button" title="github button">
+                    <span aria-hidden="true" class="fas fa-user"></span>
+                    </button>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    
+    
+    <section class="min-vh-100  d-flex bg-primary mt-6">
+                <div class="container">
+                    <div class="row mt-6 mb-2 justify-content-center">
+                        <div class="col-12  col-md-12 col-lg-12 justify-content-center">
+                            <div class="card bg-primary shadow-soft border-light p-4">
+                            <h1 class="text-center text-success mb-5"><span class="fas fa-diagnoses mr-2"></span>Brain&nbsp;Tumor&nbsp;Detector</h1>
+                            
+    
+            <div class="col-12  mt-5">
+                <div class="row">
+
+            <div class="col-md-5 profile-card mb-5">
+                <div class="card bg-primary shadow-inset border-light text-center">
+                    <div class="card-header">
+                        <div class="profile-image bg-primary shadow-inset border border-light rounded mx-auto p-3 mt-n6" style="height: 280px; width: 280px;">
+                            <div id="imagePreview">
+                            <div id="prev" style="height: 100%;width: 100%;">
+                            <img src=" {{url_for('static', filename=org_name )}}" style="height: 100%;width: 100%;">
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card-body pb-5">
+                        <div class="custom-file">
+                            <form id="upload-form" action="/brain/predict" method="POST" enctype="multipart/form-data">
+                            
+                            <input class="custom-file-input" id="file-picker" class="d-flex justify-content-center" type="file" name="file" accept="image/*" multiple >
+                            <button class="btn btn-primary mr-3 mt-3 text-success" type="submit" id="btn-predict" id="upload-button">
+                                <span class="mr-1"><span class="far fa-check-circle"></span></span>
+                                Predict
+                            </button>
+                            </form>
+
+                            <label class="custom-file-label text-left" for="customFile">Upload Image</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-7 profile-card mb-5">
+                <div class="card bg-primary shadow-inset border-light text-center">
+                    <div class="card-header">
+                        <div class="profile-image bg-primary shadow-inset border border-light rounded mx-auto p-3 mt-n6" style="height: 280px; width: 280px;">
+                            <div id="imagePreview">
+                            <div id="prev" style="height: 100%;width: 100%;">
+                            <img src=" {{url_for('static', filename=wts_name )}}" style="height: 100%;width: 100%;">
+                        </div>
+                        </div>
+                        </div>
+                        <br>
+                        <br>
+
+                        <div style="display: flex;
+                        justify-content: center;"><table border="0px" >     
+      <ul class="legend">
+        <li><span class="green"></span> Most Severe</li>
+        <li><span class="blue"></span> Mildly Severe</li>
+        <li><span class="pink"></span> Least Severe</li>
+      </ul>
+    </table></div>     
+                        <div class="card-body p-4 p-sm-5">                                                       
+                            <div class="d-flex px-3">                                
+                                <div class="pl-md-5 pl-sm-4 text-center">
+                                    <h3 class="h5">Result:</h3>
+                                    <h3 class="text-success" id="result"></h3>
+                                    
+                                    <h3>Tumorous prediction</strong></h3>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style= "{{"width:" ~ class1 ~"% ; animation: 5s ease 0s 1 normal none running animate-positive"}}", opacity: "1"}}></div>
+                                    </div>
+                                    <strong>{{ class1 }} %</strong>
+                                    <h3 >Non - Tumorous prediction</h3>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style= "{{"width:" ~ class2 ~"% ; animation: 5s ease 0s 1 normal none running animate-positive"}}", opacity: "1"}}></div>
+                                    </div>
+                                <strong>{{ class2 }} %</strong>
+                                    <h3 >Not A Brain MRI</h3>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style= "{{"width:" ~ class3 ~"% ; animation: 5s ease 0s 1 normal none running animate-positive"}}", opacity: "1"}}></div>
+                                    </div>
+                                <strong>{{ class3 }} %</strong>
+                                    <div class="progress-wrapper">
+                                <div class="progress-info">
+            
+                                </div>
+                                <div id="loader">
+                                LOADING
+                                <div class="progress">
+                                    
+                                    <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 60%; animation: 5s ease 0s 1 normal none running animate-positive;", opacity: "1"}}></div>
+                                </div>
+                                </div>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- <div class="col-md-1 mb-5"></div> -->
+        <!-- <div class="col-md-6 mb-5">
+            <div class="row">
+    
+            <div class="w-100 card bg-primary shadow-soft border-light text-left mb-4 mb-md-0">
+                <div class="card-body p-4 p-sm-5">
+                    <div class="d-flex px-3">
+                        <div class="pl-3 pl-sm-4 text-center">
+                            <h3 class="h5">Result:</h3>
+                            <h3 class="text-success" id="result"></h3>
+                            
+                            <h3>Tumorous prediction</strong></h3>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style= "{{"width:" ~ class1 ~"% ; animation: 5s ease 0s 1 normal none running animate-positive"}}", opacity: "1"}}></div>
+                            </div>
+                            <strong>{{ class1 }} %</strong>
+                            <h3 >Non - Tumorous prediction</h3>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style= "{{"width:" ~ class2 ~"% ; animation: 5s ease 0s 1 normal none running animate-positive"}}", opacity: "1"}}></div>
+                            </div>
+                        <strong>{{ class2 }} %</strong>
+                            <!-- <h3 >NOT Skin Cancer Type</h3>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style= "{{"width:" ~ class3 ~"% ; animation: 5s ease 0s 1 normal none running animate-positive"}}", opacity: "1"}}></div>
+                            </div>
+                        <strong>{{ class3 }} %</strong> -->
+                            <!-- <div class="progress-wrapper">
+                        <div class="progress-info">
+    
+                        </div>
+                        <div id="loader">
+                        LOADING
+                        <div class="progress">
+                            
+                            <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 60%; animation: 5s ease 0s 1 normal none running animate-positive;", opacity: "1"}}></div>
+                        </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+ 
+    
+    
+</div> -->
+</div>
+</div>
+ </div>
+</div>
+</div>
+</div>
+</section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+<script src="{{ url_for('static', filename='skin/js/main.js') }}" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+
+    $("#file-picker").change(function(){
+
+        var input = document.getElementById('file-picker');
+
+        for (var i=0; i<input.files.length; i++)
+        {
+        //koala.jpg, koala.JPG substring(index) lastIndexOf('a') koala.1.jpg
+            var ext= input.files[i].name.substring(input.files[i].name.lastIndexOf('.')+1).toLowerCase()
+
+            if ((ext == 'jpg') || (ext == 'png') || (ext == 'jpeg'))
+            {
+                $("#msg").text("Files are supported")
+            }
+            else
+            {
+                $("#msg").text("Files are NOT supported")
+                document.getElementById("file-picker").value ="";
+            }
+
+        }
+
+
+    } );
+
+    $("#ct_file-picker").change(function(){
+
+        var input = document.getElementById('ct_file-picker');
+
+        for (var i=0; i<input.files.length; i++)
+        {
+        //koala.jpg, koala.JPG substring(index) lastIndexOf('a') koala.1.jpg
+            var ext= input.files[i].name.substring(input.files[i].name.lastIndexOf('.')+1).toLowerCase()
+
+            if ((ext == 'jpg') || (ext == 'png') || (ext == 'jpeg'))
+            {
+                $("#ct_msg").text("Files are supported")
+            }
+            else
+            {
+                $("#ct_msg").text("Files are NOT supported")
+                document.getElementById("ct_file-picker").value ="";
+            }
+
+        }
+
+
+    } );
+
+</script>
+</html>

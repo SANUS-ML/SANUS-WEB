@@ -1,0 +1,143 @@
+
+<html>  
+<head>
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css"href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+</head>
+  
+<body style="margin: 0;background-color: hsl(89, 43%, 51%)"">
+
+
+<div>
+    <style>
+      .chat-cont {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 99;
+      }
+      .chat-bot {
+        display: inline-block;
+        
+      }
+
+      .chat-bot2 {
+        display: none;
+        
+      }
+    </style>
+    <div class="chat-cont">
+
+    	<button class="button-new" id="chat-bot" onclick="newchatbotfunc()"><h5>💬</h5></button>
+    
+      <div id="chat-bot2"><iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/97f09653-b8d2-4884-ad86-4095bdb8e91f"></iframe>
+      <button class="button-new2" onclick="newchatbotfunc()">x</button>
+      </div>
+    </div>
+    <script>
+      function newchatbotfunc() {
+        var x = document.getElementById("chat-bot2");
+        var y = document.getElementById("chat-bot");
+        if (x.style.display === "none" && y.style.display === "inline-block") {
+          x.style.display = "inline-block";
+          y.style.display = "none";
+        } else {
+          x.style.display = "none";
+          y.style.display = "inline-block";
+        }
+      }
+    </script>
+  </div>
+
+
+<div style="border: solid;text-align: center;"><h1 style="text-align: center;",>{{oneName}}</h1><h3>{{OneAddress}}<br>Docter's Name: {{OneDocterName}}<br>Contect No : {{OneContect}} <br>Distance from you : {{OneDistance}} Meters</h3></div>
+<div style="align-content: center; width: 70%; height: 80%; border: solid;" id="mapContainer"></div>
+
+<script>	
+      // Initialize the platform object:
+      var platform = new H.service.Platform({
+        'apikey': '{{apikey}}'
+      });
+	  
+	   const lat = {{latitude}};
+	   const lng = {{longitude}};
+	   
+	   const hospitalOne_lat = {{oneLatitude}}; 
+	   const hospitalOne_lng = {{oneLongitude}};
+
+	   const hospitalTwo_lat = {{twoLatitude}}; 
+	   const hospitalTwo_lng = {{twoLongitude}};   
+	
+	// Obtain the default map types from the platform object
+      var maptypes = platform.createDefaultLayers();
+
+      // Initialize a map:
+      var map = new H.Map(
+        document.getElementById('mapContainer'),
+        maptypes.raster.terrain.map,
+        {
+          zoom: 15,
+          center: { lat: lat, lng: lng }  
+        });
+		
+	// Enable the event system on the map instance:
+	  var mapEvents = new H.mapevents.MapEvents(map);
+	
+	// Instantiate the default behavior, providing the mapEvents object:
+	 var behavior = new H.mapevents.Behavior(mapEvents);
+
+	var myLocation_marker = new H.map.Marker({ lat: lat, lng: lng });
+	var hospitalOne_marker = new H.map.Marker({ lat: hospitalOne_lat, lng: hospitalOne_lng });
+	var hospitalTwo_marker = new H.map.Marker({ lat: hospitalTwo_lat, lng: hospitalTwo_lng });
+	
+	// Add the marker to the map:
+	map.addObject(myLocation_marker);
+	map.addObject(hospitalOne_marker);
+	map.addObject(hospitalTwo_marker);
+	
+	
+	// Create the default UI:
+	var ui = H.ui.UI.createDefault(map, maptypes);
+	
+	// Add event listener to the marker:
+	myLocation_marker.addEventListener('tap', function(evt) {
+    
+		// Create an info bubble object at a specific geographic location:
+		var bubble = new H.ui.InfoBubble({ lng: lng, lat: lat }, {
+                content: ''
+             });
+		bubble.setContent('<div style="height: 130px; overflow: auto; width: 270px;"><h3>"Hi"</h3><p>"This is you!"</p></div>');
+		// Add info bubble to the UI:
+		ui.addBubble(bubble);
+	});	
+	
+hospitalOne_marker.addEventListener('tap', function(evt) {
+    
+		// Create an info bubble object at a specific geographic location:
+		var bubble = new H.ui.InfoBubble({ lng: hospitalOne_lng, lat: hospitalOne_lat }, {
+                content: ''
+             });
+		bubble.setContent('<div style="height: 130px; overflow: auto; width: 270px;"><h3>{{oneName}}</h3><p>{{oneAddress}}</p></div>');
+		// Add info bubble to the UI:
+		ui.addBubble(bubble);
+	});
+	
+hospitalTwo_marker.addEventListener('tap', function(evt) {
+    
+		// Create an info bubble object at a specific geographic location:
+		var bubble = new H.ui.InfoBubble({ lng: hospitalTwo_lng, lat: hospitalTwo_lat }, {
+                content: ''
+             });
+		bubble.setContent('<div style="height: 130px; overflow: auto; width: 270px;"><h3>{{twoName}}</h3><p>{{twoAddress}}</p></div>');
+		// Add info bubble to the UI:
+		ui.addBubble(bubble);
+	});
+	
+
+</script>
+</body>
+</html>
