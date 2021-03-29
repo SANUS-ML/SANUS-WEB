@@ -120,7 +120,6 @@ const App=()=> {
       <div className="row">
               <div className="wpb_column vc_column_container col-sm-3 col-xs-6 skincolored_section">
                   <div className="wpb_wrapper">
-  
   <div className="teaser_box wpb_content_element text-center  transparent boxed same_height_col  with_button    ">
   
     <div className="figure transparent">
