@@ -6,7 +6,8 @@
 
 2. python3 -m pip install --user virtualenv (In Mac or Linux)
    python -m pip install --user virtualenv (In Windows) 
-[Make sure Python3 is installed in your system]
+   
+   [Make sure Python3 is installed in your system]
 
 3. python3 -m venv env (In Mac or Linux)
    python -m venv env (In Windows) 
@@ -26,38 +27,25 @@
 ```
 .
 ├── README.md
-├── package-lock.json
-├── package.json
-├── public
-│   ├── Images/
-│   ├── css/
-│   ├── index.html
-│   ├── js/
-│   ├── manifest.json
-│   └── robots.txt
-└── src
-    ├── App.js
-    ├── images
-    │   ├── 2409741.jpg
-    │   ├── 2409773.jpg
-    │   ├── 2409773b.jpg
-    │   ├── Download-Free-Computer-Science-Background.jpg
-    │   ├── WTH.gif
-    │   ├── brain-tumor.jpg
-    │   ├── ecg.gif
-    │   ├── heart_disease.jpg
-    │   ├── hrr.jpg
-    │   ├── logo3.png
-    │   ├── logo_up.png
-    │   ├── malaria.jpg
-    │   ├── manish.jpeg
-    │   ├── mosquito.png
-    │   ├── pp.png
-    │   ├── sayan.jpg
-    │   ├── strive-cardiology.png
-    │   └── taran.png
-    └── index.js
+├── .gitignore
+├── .gitattributes
+├── app.py
+├── watershed_algo.py
+├── requirements.txt
+├── test_images
+│   ├── Brain Tumor Detection/
+│   ├── Malaria Detection/
+│   ├── Pneumonia Detection/
+│   └── Skin Cancer/
+├── model/
+│   ├── Pneumonia-DENSENET.h5
+│   ├── heart_model .pkl
+│   ├── keras_model.h5
+│   ├── skin.h5
+│   ├── tumor_prediction.h5
+│   └── malariaModel.h5
+└── static/
 
-6 directories, 58 files
+325 directories, 8116 files
 ```
 # Thank You!
