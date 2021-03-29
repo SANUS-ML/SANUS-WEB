@@ -9,7 +9,8 @@
 [Make sure Python3 is installed in your system]
 
 3. python3 -m venv env (In Mac or Linux)
-   py -m venv env (In Windows) 
+   python -m venv env (In Windows) 
+   
 4. source env/bin/activate  (In Mac or Linux)
    .\env\Scripts\activate (In Windows) 
    
