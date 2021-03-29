@@ -1,3 +1,4 @@
 env/
 .vscode/
 model.zip
+__pycache__/
