@@ -10,7 +10,7 @@
 SANUS is a Computer Aided Diagnostic Platform where people can diagnose their diseases with one click. We use Deep Learning and Machine Learning techniques to detect the pattern of various disease with the patient electronic healthcare records and provide information of various anomalies. In our platform we are tackling five major diseases for now, thses are Brain Tumor Detection using U-Net, Malaria Detection, Skin Cancer, Heart Disease and Pneumonia Detection using CT Scan. We have applied different state of art models to achieve a good accuracy of our models. Our target audience are the people who want fast medical checkups. As we all know, internet is available to majority of the people and they can go and conduct test. Doctors who want to recommend patients for their illness online as the  process will be more easier with no loss of any medical documents. Some of the unique features of our project. It is user friendly. We can get instant report of the diagnosis. Light Weighted Machine Learning and Deep Learning Models are used. It provides a multi-platform support.
 
 ## Project Demo
-[Youtube Link](https://youtu.be/btGCzlapTsE)
+[Youtube Link](https://youtu.be/sOVPICCQSFI)
 
 ## Our Services
 1. Malaria Detection
