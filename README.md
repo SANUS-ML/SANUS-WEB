@@ -1,4 +1,4 @@
-# SANUS - A Cadx Platfrom
+# SANUS - A Cadx Platform
 
 ![GitHub forks](https://img.shields.io/github/forks/SANUS-ML/SANUS-WEB?style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/SANUS-ML/SANUS-WEB?style=for-the-badge)
