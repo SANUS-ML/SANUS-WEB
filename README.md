@@ -65,4 +65,4 @@ SANUS is a Computer Aided Diagnostic Platform where people can diagnose their di
 * [Sambit Kumar Majhi](https://github.com/sambitraze)
 * [Manish Bharadwaj](https://github.com/2221mb)
 * [Taranpreet Singh Chabbra](https://github.com/singhtaran1005)
-* [Amprita Singh](https://github.com/ampritasingh)
+* [Amprita Singh](https://github.com/Amprita)
